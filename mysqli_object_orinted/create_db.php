@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $sql = "CREATE DATABASE db_oo";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
+    echo "Database created successfully using Object Oriented Method";
 } 
 else {
     echo "Error creating database: " . $conn->error;
