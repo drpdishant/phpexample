@@ -14,7 +14,7 @@ $sql = "select TaskName, TaskDescription, date_time FROM TaskList";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
-    echo "Task Name   | Task Description                          | Time Stamp";
+    echo "Task Name   | Task Description                          | Time Stamp <br>";
     while ($row = $result->fetch_assoc())
     {
         echo $row["TaskName"]." | ".$row["TaskDescription"] . "  |  " . $row["date_time"]. "<br>"; 
