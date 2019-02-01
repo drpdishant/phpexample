@@ -8,10 +8,11 @@ $db_name = "db_oo";
 $conn = new mysqli($db_host,$db_root_user,$db_root_password,$db_name);
 //Check Connection
 
-if(!$conn->connect_error)
+if($conn->connect_error)
 {
     echo("Connection failed:" . $conn->connect_error);
 }
+
 $sql = "CREATE TABLE TaskList (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     TaskName VARCHAR(30) NOT NULL,
