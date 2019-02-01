@@ -14,10 +14,10 @@ if ($conn->connect_error) {
 $sql = "DROP DATABASE db_oo";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully using Object Oriented Method";
+    echo "Database Dropped SuccessFully - Data Reset";
 } 
 else {
-    echo "Error creating database: " . $conn->error;
+    echo "Error Dropping Database: " . $conn->error;
 }
 
 $conn->close();
