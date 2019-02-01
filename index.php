@@ -1,29 +1,8 @@
 <?php
-include 'mysqli_object_orinted/connect_db.php';
+$php_dir = "./mysqli/";
 
-echo "<br><br>";
-
-include 'mysqli_procedural/connect_db.php';
-echo "<br><br>";
-
-include 'pdo/connect_db.php';
-
-echo "<br><br>";
-
-//Database Creation Using Object Oriented Method
-include 'mysqli_object_oriented/create_db.php';
-
-echo "<br><br>";
-
-//Database Creation Using  Procedural Method
-
-include 'mysqli_procedural/connect_db.php';
-echo "<br><br>";
-
-//Database Creation Using  PDO Method
-
-include 'pdo/connect_db.php';
-
-echo "<br><br>";
+include $php_dir."connect_db.php";
+include $php_dir."create_db.php";
+include $php_dir."create_table.php";
 
 ?>
