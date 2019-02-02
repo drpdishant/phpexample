@@ -10,5 +10,5 @@ This is a simple PHP Application Connecting to MySQL
 
 
 # Dockerized Version
-Link to the Container on Docker Hub 
+Link to the Docker Image on Docker Hub 
 https://hub.docker.com/r/drpdishant/firstapp
