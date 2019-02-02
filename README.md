@@ -18,3 +18,4 @@ Run the container by executing following commands
 ```
 docker run -d --name phpexample -p 8080:80 drpdishant/firstapp
 ```
+Open the browser and go to http://localhost:8080/phpexample
