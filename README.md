@@ -12,3 +12,9 @@ This is a simple PHP Application Connecting to MySQL
 # Dockerized Version
 Link to the Docker Image on Docker Hub 
 https://hub.docker.com/r/drpdishant/firstapp
+
+# Running The Container
+Run the container by executing following commands
+```
+docker run -d --name phpexample -p 8080:80 drpdishant/firstapp
+```
