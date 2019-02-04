@@ -64,5 +64,5 @@ Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:14:50
 ```
 
 To Reset the database:
-Open  (http://localhost:8080/phpexample/reset){:target="_blank"}
+Open [http://localhost:8080/phpexample/reset](http://localhost:8080/phpexample/reset){:target="_blank"}
 Delete the database created and start again
