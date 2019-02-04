@@ -13,9 +13,33 @@ This is a simple PHP Application Connecting to MySQL
 Link to the Docker Image on [Docker Hub](https://hub.docker.com/r/drpdishant/firstapp)
 
 # Running The Container
-Run the container by executing following commands
+Run the download the docker-compose.yml and run it by executing following commands
 ```
-docker run -d --name phpexample -p 8080:80 drpdishant/firstapp
+docker-compose up -d
+```
+Here is the sample Compose File, 
+you may edit the port mapping if it conflicts with your current MySQL and Http Port
+
+```
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootuser
+    ports:
+      - 3306:3306
+      - 33060:33060
+
+  php:
+    image: drpdishant/firstapp
+    restart: always
+    ports:
+      - 8080:80
 ```
 Open the browser and go to http://localhost:8080/phpexample
 
