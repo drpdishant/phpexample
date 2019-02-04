@@ -13,17 +13,56 @@ This is a simple PHP Application Connecting to MySQL
 Link to the Docker Image on [Docker Hub](https://hub.docker.com/r/drpdishant/firstapp)
 
 # Running The Container
-Run the container by executing following commands
+Run the download the docker-compose.yml and run it by executing following commands
 ```
-docker run -d --name phpexample -p 8080:80 drpdishant/firstapp
+docker-compose up -d
+```
+Here is the sample Compose File, 
+you may edit the port mapping if it conflicts with your current MySQL and Http Port
+
+```
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootuser
+    ports:
+      - 3306:3306
+      - 33060:33060
+
+  php:
+    image: drpdishant/firstapp
+    restart: always
+    ports:
+      - 8080:80
 ```
 Open the browser and go to http://localhost:8080/phpexample
+Output will be similar to one given below for the first time:
+```
+Connected successfully using MySQLi Object Oriented
+Database created successfully using Object Oriented Method
+Table TaskList Created SuccessFully
+Inserted Data SuccessFully
+Task Name | Task Description | Time Stamp 
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:13:43
 
-At present mysql is not configured so it will display error messages as bellow
+```
+On refresh it will be similar to:
+```
+Connected successfully using MySQLi Object Oriented
+Error creating database: Can't create database 'db_oo'; database exists
+Error Creating Table: Table 'TaskList' already exists
+Inserted Data SuccessFully
+Task Name | Task Description | Time Stamp 
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:13:43
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:14:50
+```
 
->Connection failed: No such file or directory
->Connection failed: No such file or directoryError creating database: 
->Connection failed:No such file or directoryError Creating Table: 
->Connection Failed: No such file or directoryError: INSERT INTO TaskList (TaskName,TaskDescription) VALUES ( 'Insert Data', 'Insert Data >into MySQL DB using PHP' )
-
->Connection Failed: No such file or directory0 Results
+To Reset the database:
+Open [http://localhost:8080/phpexample/reset](http://localhost:8080/phpexample/reset)
+Delete the database created and start again
