@@ -66,3 +66,9 @@ Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:14:50
 To Reset the database:
 Open [http://localhost:8080/phpexample/reset](http://localhost:8080/phpexample/reset)
 Delete the database created and start again
+
+#Run Using ansible Playbook
+Download the ansible-playbook.yml file, and run it using
+```
+ansible-playbook ansible-playbook.yml
+```
