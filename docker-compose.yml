@@ -3,11 +3,13 @@ version: '3.1'
 services:
 
   db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    image: mariadb
     restart: always
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD: rootuser
+      MYSQL_DATABASE: db_oo
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
     ports:
       - 3306:3306
       - 33060:33060
