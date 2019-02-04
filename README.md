@@ -68,7 +68,10 @@ Open [http://localhost:8080/phpexample/reset](http://localhost:8080/phpexample/r
 Delete the database created and start again
 
 # Run Using ansible Playbook
-Download the ansible-playbook.yml file, and run it using
+Download the ansible_playbook.yml file, and run it using
 ```
-ansible-playbook ansible-playbook.yml
+ansible-playbook ansible_playbook.yml
 ```
+Its assumed that you have configured required hosts in the ```/etc/ansible/hosts```
+
+The current playbook used "hosts: all"paramater, you may change it as required to refer to a specific group of hosts.
