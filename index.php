@@ -1,5 +1,5 @@
 <?php
-$php_dir = "./mysqli/";
+$php_dir = "./mysqli_docker/";
 
 include $php_dir."connect_db.php";
 echo '<br>';
