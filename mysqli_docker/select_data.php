@@ -1,7 +1,7 @@
 <?php
 $db_host = "db";
 $db_root_user = "root";
-$db_root_password = "";
+$db_root_password = "rootuser";
 $db_name = "db_oo";
 
 $conn = new mysqli($db_host, $db_root_user, $db_root_password, $db_name);
