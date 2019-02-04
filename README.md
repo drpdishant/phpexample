@@ -72,3 +72,6 @@ Download the ansible-playbook.yml file, and run it using
 ```
 ansible-playbook ansible-playbook.yml
 ```
+Its assumed that you have configured required hosts in the ```/etc/ansible/hosts```
+
+The current playbook used "hosts: all"paramater, you may change it as required to refer to a specific group of hosts.
