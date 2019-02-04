@@ -1,0 +1,25 @@
+---
+- hosts: 127.0.0.1
+  gather_facts: true
+  connection: local
+  tasks:
+    
+    - name: docker | Start db container
+      docker_container:
+        docker_host: unix://var/run/docker.sock
+        name: db
+        image: mariadb
+        ports: 
+          - '3306:3306'
+        env: 
+          MYSQL_ROOT_PASSWORD: rootuser
+
+    - name: docker | Start web container
+      docker_container:
+        docker_host: unix://var/run/docker.sock
+        name: web
+        image: drpdishant/firstapp
+        ports: 
+          - '8080:80'
+        links:
+          - db
