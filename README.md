@@ -42,12 +42,27 @@ services:
       - 8080:80
 ```
 Open the browser and go to http://localhost:8080/phpexample
+Output will be similar to one given below for the first time:
+```
+Connected successfully using MySQLi Object Oriented
+Database created successfully using Object Oriented Method
+Table TaskList Created SuccessFully
+Inserted Data SuccessFully
+Task Name | Task Description | Time Stamp 
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:13:43
 
-At present mysql is not configured so it will display error messages as bellow
+```
+On refresh it will be similar to:
+```
+Connected successfully using MySQLi Object Oriented
+Error creating database: Can't create database 'db_oo'; database exists
+Error Creating Table: Table 'TaskList' already exists
+Inserted Data SuccessFully
+Task Name | Task Description | Time Stamp 
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:13:43
+Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:14:50
+```
 
->Connection failed: No such file or directory
->Connection failed: No such file or directoryError creating database: 
->Connection failed:No such file or directoryError Creating Table: 
->Connection Failed: No such file or directoryError: INSERT INTO TaskList (TaskName,TaskDescription) VALUES ( 'Insert Data', 'Insert Data >into MySQL DB using PHP' )
-
->Connection Failed: No such file or directory0 Results
+To Reset the database:
+Open  http://localhost:8080/phpexample/reset
+Delete the database created and start again
