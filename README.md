@@ -39,9 +39,9 @@ services:
     image: drpdishant/firstapp
     restart: always
     ports:
-      - 8080:80
+      - 8000:80
 ```
-Open the browser and go to http://localhost:8080/phpexample
+Open the browser and go to http://localhost:8000/phpexample
 Output will be similar to one given below for the first time:
 ```
 Connected successfully using MySQLi Object Oriented
@@ -65,7 +65,7 @@ Insert Data | Insert Data into MySQL DB using PHP | 2019-02-04 18:14:50
 ```
 
 To Reset the database:
-Open [http://localhost:8080/phpexample/reset](http://localhost:8080/phpexample/reset)
+Open [http://localhost:8000/phpexample/reset](http://localhost:8080/phpexample/reset)
 Delete the database created and start again
 
 # Run Using ansible Playbook
