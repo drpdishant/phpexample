@@ -1,0 +1,17 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Stop') { 
+            steps {
+                // 
+                ansiblePlaybook installation: 'ansible', playbook: '/var/www/html/phpexample/stop-remove-app.yml'
+            }
+        }
+        stage('Start') { 
+            steps {
+                //
+                ansiblePlaybook installation: 'ansible', playbook: '/var/www/html/phpexample/start-app.yml'
+            }
+        }
+    }
+}
