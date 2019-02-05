@@ -6,7 +6,7 @@
     
     - name: docker | Start db container
       docker_container:
-        docker_host: tcp://192.168.0.101:2376
+        docker_host: tcp://0.0.0.0:2376
         name: db
         image: mariadb
         ports: 
@@ -17,7 +17,7 @@
 
     - name: docker | Start web container
       docker_container:
-        docker_host: tcp://192.168.0.101:2376
+        docker_host: tcp://0.0.0.0:2376
         name: web
         image: drpdishant/firstapp
         ports: 
