@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: true
+  connection: local
+  tasks:
+    
+    - name: docker | Stopping & Removing db container
+      docker_container:
+        docker_host: tcp://0.0.0.0:2376
+        name: db
+        state: absent
+
+    - name: docker | Stopping & Removing web container
+      docker_container:
+        docker_host: tcp://0.0.0.0:2376
+        name: web
+        state: absent
