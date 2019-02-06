@@ -76,3 +76,13 @@ ansible-playbook ansible_playbook.yml
 Its assumed that you have configured required hosts in the ```/etc/ansible/hosts```
 
 The current playbook used "hosts: all"paramater, you may change it as required to refer to a specific group of hosts.
+
+# Executing ansible Playbook with Jenkins Build Job
+
+First Installed and Configured Jenkins on the system.
+
+Installed Ansible Plugin via Jenkins Plugin Manager
+
+![Ansible Plugin Install]
+(https://raw.githubusercontent.com/drpdishant/phpexample/master/jenkins/Screenshot_2019-02-06_15-37-10.png)
+      
