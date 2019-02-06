@@ -85,3 +85,14 @@ Installed Ansible Plugin via Jenkins Plugin Manager
 
 ![Ansible Plugin Install](https://raw.githubusercontent.com/drpdishant/phpexample/master/jenkins/Screenshot_2019-02-06_15-37-10.png)
       
+Configured Ansible Executable in Global Tool Configuration
+
+![Configure Ansible](https://raw.githubusercontent.com/drpdishant/phpexample/master/jenkins/Screenshot_2019-02-06_15-39-02.png)
+
+Created Build Job to run ansible playbook and provided path to the playbook file.
+
+![Create Build Job](https://raw.githubusercontent.com/drpdishant/phpexample/master/jenkins/Screenshot_2019-02-06_15-45-10.png)
+
+Executed Build Job
+
+![Console Output](https://raw.githubusercontent.com/drpdishant/phpexample/master/jenkins/Screenshot_2019-02-06_15-43-29.png)
