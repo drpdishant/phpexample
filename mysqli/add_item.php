@@ -1,8 +1,8 @@
 <?php
-$db_host = "127.0.0.1";
-$db_root_user = "root";
-$db_root_password = "rootuser";
-$db_name = "db_oo";
+$db_host = getenv('DB_HOST');
+$db_root_user = getenv('DB_ROOT_USER');
+$db_root_password = getenv('DB_ROOT_PASSWORD');
+$db_name = getenv('DB_NAME');
 
 $conn = new mysqli($db_host,$db_root_user,$db_root_password,$db_name);
 
