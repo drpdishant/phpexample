@@ -1,7 +1,8 @@
 <?php
-$db_host = "db";
-$db_root_user = "root";
-$db_root_password = "rootuser";
+$db_host = "MYSQL_HOSTNAME";
+$db_root_user = "MYSQL_ROOT_USER";
+$db_root_password = "MYSQL_ROOT_PASSWORD";
+$db_name = "MYSQL_DATABASE";
 
 // Create connection
 
