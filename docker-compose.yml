@@ -17,3 +17,8 @@ services:
     restart: always
     ports:
       - 8000:80
+    environment: 
+      MYSQL_ROOT_PASSWORD: rootuser
+      MYSQL_ROOT_USER: root
+      MYSQL_DATABASE: phpdemo
+      MYSQl_HOSTNAME: db
