@@ -17,8 +17,8 @@ RUN apt-get -y install apache2 php php-mysql libapache2-mod-php
 RUN a2enmod rewrite
 RUN service apache2 restart
 
-RUN git clone https://github.com/drpdishant/phpexample.git /var/www/html/phpexample
-
+RUN rm -rf /var/www/html/*
+COPY . /var/www/html
 EXPOSE 80
 
 CMD apachectl -D FOREGROUND
